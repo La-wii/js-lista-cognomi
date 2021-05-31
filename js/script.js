@@ -42,4 +42,10 @@ console.log(listaCognomi);
 
 // scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 
+// tentativo 1
+// listaCognomi.forEach(function(element) {
+//     listaCognomi.push("<li>" + element + "</li>");
+// });
+
+// list.innerHTML = listaCognomi.join('');
 
