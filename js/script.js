@@ -31,9 +31,8 @@
 
 // chiedi all’utente il cognome
 var cognome = prompt('Scrvi il tuo cognome');
+
 // inseriscilo in un array con altri cognomi: ‘Bianchi’, ‘Neri’, ‘Rossi’, ‘Verdi’, ‘Gialli’
-
-
 var listaCognomi = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 listaCognomi.push(cognome);
 console.log(listaCognomi);
@@ -59,6 +58,5 @@ document.getElementById("elenco").innerHTML = listaCognomi;
 // console.log(listaCognomi);
 
 var posizione = listaCognomi.indexOf(cognome);
-// console.log(posizione + 1);
 document.getElementById("tuaposizione").innerHTML = posizione + 1;
 
