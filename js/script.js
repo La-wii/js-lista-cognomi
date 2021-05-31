@@ -7,15 +7,22 @@ var email = prompt('Inserisci la tua e-mail');
 var lista = ["rossi@gmail.com", "gialli@gmail.com", "verdi@gmail.com"];
 
 
+// for (i = 0; i < lista.length; i++) {
+//     if (email == lista[i]) {
+//         console.log('Puoi accedere');
+//     } else {
+//         console.log('Non puoi accedere');
+//     }
+
+// }   
+
+// Stampa un messaggio appropriato sull’esito del controllo.
+
 for (i = 0; i < lista.length; i++) {
     if (email == lista[i]) {
-        console.log('Puoi accedere');
+        alert('Puoi accedere');
     } else {
-        console.log('Non puoi accedere');
+        alert('Non puoi accedere');
     }
 
 }   
-
-
-
-// Stampa un messaggio appropriato sull’esito del controllo.
