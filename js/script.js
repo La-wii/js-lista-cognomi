@@ -32,6 +32,7 @@
 // chiedi all’utente il cognome
 var cognome = prompt('Scrvi il tuo cognome');
 
+
 // inseriscilo in un array con altri cognomi: ‘Bianchi’, ‘Neri’, ‘Rossi’, ‘Verdi’, ‘Gialli’
 var listaCognomi = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 listaCognomi.push(cognome);
@@ -60,3 +61,26 @@ document.getElementById("elenco").innerHTML = listaCognomi;
 var posizione = listaCognomi.indexOf(cognome);
 document.getElementById("tuaposizione").innerHTML = posizione + 1;
 
+
+// bonus
+
+// tentativo 1 fallito
+// function capitalizeFirstLetter(string) {
+//     return string[0].toUpperCase() + string.slice(1);
+// }
+
+// tentativo 2 fallito
+// function capitalize(string) {
+//     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+// }
+
+// tentativo 3 fallito
+// const capitalize = (s) => {
+//     if (typeof s !== 'string') return ''
+//     return s.charAt(0).toUpperCase() + s.slice(1)
+// }
+
+// tentativo 4 fallito
+// function capitalizeFirstLetter(str) {
+//     return str[0].toUpperCase() + str.slice(1);
+// }
