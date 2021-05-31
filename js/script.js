@@ -40,6 +40,9 @@ console.log(listaCognomi);
 listaCognomi.sort();
 console.log(listaCognomi);
 
+document.getElementById("elenco").innerHTML = listaCognomi;
+
+
 // scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 
 // tentativo 1
@@ -49,3 +52,9 @@ console.log(listaCognomi);
 
 // list.innerHTML = listaCognomi.join('');
 
+// listaCognomi.indexOf() + 1;
+// console.log(listaCognomi);
+
+var posizione = listaCognomi.indexOf(cognome);
+console.log(posizione + 1);
+document.getElementById("tuaposizione").innerHTML = posizione;
