@@ -16,7 +16,7 @@
 
 // }   
 
-// Stampa un messaggio appropriato sull’esito del controllo.
+// Stampa un messaggio appropriato sull’esito del controllo ALERT.
 
 // for (i = 0; i < lista.length; i++) {
 //     if (email == lista[i]) {
@@ -31,56 +31,32 @@
 
 // chiedi all’utente il cognome
 var cognome = prompt('Scrvi il tuo cognome');
+cognome = cognome.charAt(0).toUpperCase() + cognome.substring(1).toLowerCase(); 
 
 
 // inseriscilo in un array con altri cognomi: ‘Bianchi’, ‘Neri’, ‘Rossi’, ‘Verdi’, ‘Gialli’
 var listaCognomi = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 listaCognomi.push(cognome);
 console.log(listaCognomi);
+
 // stampa la lista ordinata alfabeticamente
 listaCognomi.sort();
 console.log(listaCognomi);
 
-document.getElementById("elenco").innerHTML = listaCognomi;
+// document.getElementById("elenco").innerHTML = listaCognomi;
 
 
 // scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 
-// tentativo 1
-// listaCognomi.forEach(function(element) {
-//     listaCognomi.push("<li>" + element + "</li>");
-// });
+// fatto con indexOf
 
-// list.innerHTML = listaCognomi.join('');
+// var posizione = listaCognomi.indexOf(cognome);
+// document.getElementById("tuaposizione").innerHTML = posizione + 1;
 
-
-// tentativo 2
-// listaCognomi.indexOf() + 1;
-// console.log(listaCognomi);
-
-var posizione = listaCognomi.indexOf(cognome);
-document.getElementById("tuaposizione").innerHTML = posizione + 1;
-
-
-// bonus
-
-// tentativo 1 fallito
-// function capitalizeFirstLetter(string) {
-//     return string[0].toUpperCase() + string.slice(1);
-// }
-
-// tentativo 2 fallito
-// function capitalize(string) {
-//     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-// }
-
-// tentativo 3 fallito
-// const capitalize = (s) => {
-//     if (typeof s !== 'string') return ''
-//     return s.charAt(0).toUpperCase() + s.slice(1)
-// }
-
-// tentativo 4 fallito
-// function capitalizeFirstLetter(str) {
-//     return str[0].toUpperCase() + str.slice(1);
-// }
+for (var i = 0; i < listaCognomi.length; i++) {
+    document.getElementById('elenco').innerHTML +=  listaCognomi[i] + ' ';
+    if (listaCognomi[i] == cognome) {
+        // var posizione = i + 1;
+        document.getElementById('tuaposizione').innerHTML = i + 1;
+    }
+}
